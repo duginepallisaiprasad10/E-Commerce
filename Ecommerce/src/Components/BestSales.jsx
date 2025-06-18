@@ -87,7 +87,12 @@ export default function BestSales() {
                   <p className="text-xl font-bold text-green-700">
                     ₹{item.price}
                   </p>
-                  
+                  <button
+                    onClick={() => handleAddToCart(item)} // ✅ Pass the item to the function
+                    className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-1 rounded-full text-lg font-medium cursor-pointer"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
