@@ -3,6 +3,15 @@ import { products, discoutProducts } from '../Data/Products';
 
 export const globalContext = createContext();
 
+export default function MyContext({ children }) {
+  const [data, setData] = useState([]);
+  const [discoutData, setDiscountData] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+
+  const fetchData = () => {
+    setData(products);
+    setDiscountData(discoutProducts);
+  };
 
   useEffect(() => {
     fetchData();
