@@ -48,37 +48,6 @@ export default function ShopPage() {
       )}
 
       {/* Banner */}
-      <div className="relative w-full mb-10">
-        <img src={banner} alt="Banner" className="w-full h-[250px] object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-5xl md:text-6xl font-bold bg-opacity-10 px-6 py-3 rounded-lg shadow-1lg mt-15">
-            Products
-          </h1>
-        </div>
-      </div>
-
-      {/* Filters */}
-      <div className="flex mx-5 py-6 gap-10 ">
-        {/* Dropdown */}
-        <div className="relative w-[350px] ml-4 ">
-          <div className="flex justify-between items-center border border-gray-500 rounded-xl bg-gray-700 text-white font-bolder shadow-md px-4 py-3 ">
-            <span className="whitespace-nowrap text-lg">Select your Category</span>
-            <span className="border-l-2 border-gray-400 h-5 mx-4"></span>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-[280px] bg-white text-gray-700 font-medium py-2 px-3 rounded-md cursor-pointer focus:outline-none"
-            >
-              <option value="default">All</option>
-              <option value="sofa">Sofa</option>
-              <option value="chair">Chair</option>
-              <option value="watch">Watch</option>
-              <option value="mobile">Mobile</option>
-              <option value="wireless">Wireless</option>
-            </select>
-          </div>
-        </div>
-
         {/* Search Box */}
         <div className="relative w-[550px] ml-50">
           <input
