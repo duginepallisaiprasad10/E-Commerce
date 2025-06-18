@@ -1,4 +1,10 @@
-
+import React, { useContext, useState } from "react";
+import { globalContext } from "../Context/MyContext";
+import { FaHeart } from "react-icons/fa";
+import { IoStarSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../ReduxToolKit/productsSlice";
 
 export default function NewArrivals() {
   const { data } = useContext(globalContext);
