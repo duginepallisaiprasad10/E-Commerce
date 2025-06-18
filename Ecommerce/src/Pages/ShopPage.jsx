@@ -102,3 +102,44 @@ export default function ShopPage() {
             const rowItems = filteredData.slice(rowIndex * 3, rowIndex * 3 + 3);
 
             return (
+              <div
+                key={rowIndex}
+                className={`flex gap-6 mb-6 ${
+                  rowItems.length === 1
+                    ? "justify-center"
+                    : rowItems.length === 2
+                    ? "justify-evenly"
+                    : "justify-start"
+                }`}
+              >
+                {rowItems.map((item) => (
+                  <div key={item.id} className="p-4 rounded shadow-md w-full max-w-[370px] ml-10 ">
+                    <Link to={`/product/${item.id}`}>
+                      <img
+                        src={item.imgUrl}
+                        alt={item.productName}
+                        className="h-[300px] w-full object-contain"
+                      />
+                    </Link>
+                    <h2 className="text-lg font-bold mt-2">{item.productName}</h2>
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <div className="flex items-center justify-between mt-4">
+                      <p className="text-lg font-bold text-green-700">${item.price}</p>
+                      <button
+                        onClick={() => handleAddToCart(item)}
+
+                        className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-1 rounded-full text-lg font-medium cursor-pointer"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            );
+          })
+        )}
+      </div>
+    </div>
+  );
+}
