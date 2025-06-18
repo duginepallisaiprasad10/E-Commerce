@@ -105,7 +105,7 @@ export default function CartPage() {
           <hr className="border-gray-300 my-4" />
           <div className="flex justify-between text-xl font-semibold">
             <span>Total Price:</span>
-            <span className="text-green-700">${grandTotal}</span>
+            <span className="text-black-700">${grandTotal}</span>
           </div>
         </div>
       </div>
